@@ -21,17 +21,17 @@
     },
     "scheme": "utho",
     "plugins": [
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "minSdkVersion": 27
-          }
-        }
-      ],
-      "expo-dev-client",
-      "@react-native-community/datetimepicker"
-    ],
+  [
+    "expo-build-properties",
+    {
+      "android": {
+        "minSdkVersion": 27,
+        "buildArchs": ["arm64-v8a"]
+      }
+    }
+  ],
+  "@react-native-community/datetimepicker"
+],
     "extra": {
       "eas": {
         "projectId": "c8552ac3-6a1e-43b6-bf71-456b41199214"
