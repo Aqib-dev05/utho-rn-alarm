@@ -29,8 +29,13 @@ class AlarmActivity : Activity() {
 
   override fun onCreate(s: Bundle?) {
     super.onCreate(s)
-    setShowWhenLocked(true)
-    setTurnScreenOn(true)
+    if(Build.VERSION.SDK_INT >=27){
+      setShowWhenLocked(true)
+      setTurnScreenOn(true)
+    }
+    else{
+      window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON)
+    }
     window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
     if (!AlarmService.ringing) { finish(); return }
 
