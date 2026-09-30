@@ -14,7 +14,8 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.aqib.utho"
+      "package": "com.aqib.utho",
+       "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
