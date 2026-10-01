@@ -1,1 +1,10 @@
-{ "platforms": ["android"], "android": { "modules": ["expo.modules.alarmnative.AlarmNativeModule"] } }
+{
+    "platforms": [
+        "android"
+    ],
+    "android": {
+        "modules": [
+            "expo.modules.alarmnative.AlarmNativeModule"
+        ]
+    }
+}

@@ -1,4 +1,4 @@
-import { requireNativeModule } from 'expo';
+import { requireNativeModule } from "expo";
 
 export type Alarm = {
   id: number;
@@ -12,9 +12,14 @@ export type Alarm = {
   sound: string;
   soundName: string;
 };
-export type Status = { exact: boolean; battery: boolean; overlay: boolean; fullScreen: boolean };
+export type Status = {
+  exact: boolean;
+  battery: boolean;
+  overlay: boolean;
+  fullScreen: boolean;
+};
 
-const M = requireNativeModule('AlarmNative');
+const M = requireNativeModule("AlarmNative");
 
 export default {
   getAlarms: async (): Promise<Alarm[]> => JSON.parse(await M.getAlarms()),
